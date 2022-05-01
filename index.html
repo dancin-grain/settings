@@ -7,13 +7,14 @@
 
 </head>
 <body>
-  <iframe id="dgss" src="" frameborder="0" width="100%" height="824px"></iframe>
+  <iframe id="dgss" src="" frameborder="0" width="100%" height="100%"></iframe>
     <script>
       var urlParams = new URLSearchParams(window.location.search);
       if(urlParams.get('id') == null || urlParams.get('pc') == null){
         console.log("mab");
         window.location.replace("https://dancin-grain.github.io/subscription/");
       }else{
+        
         document.getElementById("dgss").src = "https://script.google.com/macros/s/AKfycbwZxxam1e3qXJK3Ikczp8d2koGRj10-h2mIlvdmbqQku7zTMpvJc-huspb6tRu4T9Qq/exec?id=" + urlParams.get('id') + "&pc=" + urlParams.get('pc');
       }
       
