@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <base target="_top">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
+    <style>
+            body{
+        background-color: #fdf9ee;
+        font-family: 'Google Sans', Roboto, Helvetica, Arial, sans-serif;
+      }
+     #introEntire, .whiteRoundedBox {
+    /* font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif; */
+    /* word-wrap: break-word; */
+    /* transition: box-shadow 280ms cubic-bezier(0.4,0,0.2,1); */
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    /* display: flex; */
+    
+    background-color: white;
+    /* background-color: #fff; */
+    /* position: relative; */
+    /* box-shadow: none; */
+    }
+
+    body{
+        width:800px;
+        margin:0 auto;
+    }
+
+   
+
+    #darkOrange{
+        
+    /* word-wrap: break-word; */
+    /* border-top-left-radius: 8px; */
+    /* border-top-right-radius: 8px; */
+    height: 10px;
+    /* left: -1px; */
+    /* position: absolute; */
+    /* top: -1px; */
+    /* width: calc(100% + 2px); */
+    background-color: rgb(246, 227, 171);
+    color: rgba(0, 0, 0, 1);
+    }
+
+    #intro{
+        
+        padding-left: 25px;
+        padding-right: 25px;
+        height:106px;
+    }
+
+    .twentyPcent{
+      font-size: 25px;
+    }
+
+    .delivered a {
+      background-color: #5FBA7D !important;
+      color: #ffffff !important;
+    }
+
+    .inProgress a {
+      background-color: #e4c61c !important;
+      color: #ffffff !important;
+    }
+
+    .notYetDelivered a {
+      background-color: #b73737 !important;
+      color: #ffffff !important;
+    }
+
+    .inactive a {
+      background-color: #494949 !important;
+      color: #ffffff !important;
+    }
+    a.ui-state-default.ui-state-active{
+      cursor:default;
+      background: #f6f6f6;
+      color: #454545;
+    }
+    select{
+
+        padding: 2px 3px;
+        /* border: 2px solid rgb(118, 118, 118); */
+        width: 162.4px;
+        box-sizing: content-box;
+
+    }
+
+    .plus, .minus{
+      vertical-align: bottom;
+      box-sizing: border-box;
+      display: inline-block;
+      margin-left: 12px;
+     
+      width: 21.47px;
+      height: 21.47px;
+      border-radius: 1px;
+      line-height: 17.4px;
+      background-color: transparent;
+      color: rgb(180, 180, 180);
+      text-align: center;
+      border: 1px solid rgb(180 180 180);
+      cursor: pointer;
+      margin-bottom: 0px;
+    }
+
+    .minus{
+      font-weight:bolder;
+    }
+
+    /* label{
+      display: inline-block;
+      margin-bottom: 5px;
+    } */
+
+    section{
+      margin-bottom: 5px;
+    }
+    button{
+        background-color: white;
+        border: 1px solid #dadce0;
+        border-radius: 5px;
+        color: rgb(156, 117, 0);
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+       
+        margin-right: 12px;
+        cursor: pointer;
+    }
+
+    /* #addASet{
+      color: rgb(156, 117, 0);
+      background-color: #fef9ee;
+    } */
+    
+    .smaller {
+      color: #606060;
+      font-size: 13.5px;
+    }
+    input[name="Address"]{
+      width:324.8px;
+    }
+
+    ul{
+      padding-left: 16px;
+      margin-bottom: 25px;
+    }
+
+    li{
+      padding-bottom: 7px;
+    }
+    input[type="submit"]{
+        
+
+    background-color: white;
+        border: 1px solid #dadce0;
+        border-radius: 5px;
+        color: rgb(156, 117, 0);
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+       
+        margin-right: 12px;
+        cursor: pointer;
+    }
+
+    .whiteRoundedBox{
+        margin-top: 12px;
+        padding-top: 10px;
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-bottom: 25px;
+    }
+     ::-webkit-scrollbar{
+                width:10px;
+            }
+            ::-webkit-scrollbar-track{
+                border-radius: 5px;
+            }
+
+            ::-webkit-scrollbar-thumb{
+                border-radius: 5px;
+                background-color: rgb(246, 227, 171);
+            }
+
+
+  @media screen and (max-width: 900px){
+        body{
+          width:100%;
+          
+      }
+
+      #intro {
+          
+          height: auto !important;
+      }
+
+      
+
+      textarea {
+        width: calc(100% - 30px);
+      }
+
+      img{
+        width: 100%;
+      }
+    }
+    </style>
+
+</head>
+<body>  
+    <p id="asd"></p>
+        <form name="google-sheet" method="POST" >
+            <div id="introEntire">
+              <div id="darkOrange"></div>
+              <div id="intro">
+                <h1>Dancin Grain Subscription Settings</h1>
+                <p>Your subscription settings have been successfully updated. We have sent you an email.</p>
+                
+              </div>
+            </div>
+           
+            
+              
+          </form>
+
+
+
+
+
+
+
+
+
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      
+    //   document.getElementById('submitBtn').addEventListener('click', 
+    //   function(e){
+    //       $('#submitBtn').prop('disabled', true);
+    //      google.script.run.withSuccessHandler(onSuccess).uploadFiles(this.parentNode.parentNode); // this.parentNode wont work as uploadFiles is expecting a form element as an object to access the myFile property/element
+    //   });
+      // function submission(e){
+      //   google.script.run.uploadFiles(e.parentNode);
+      // }
+
+    //   function onSuccess(data){
+    //     if(document.getElementById("myFile").value == ""){
+    //       alert("Please upload a screen shot of the 'Transaction Ref. No./Google Transcation ID'");
+    //       $('#submitBtn').prop('disabled', false);
+    //       return;
+    //     }
+    //     document.getElementsByName('entry.1020438313')[0].value =  data;
+    //     $("input[type='submit']").trigger("click");
+    //   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // var options = {year: '2-digit', month: 'short', day: 'numeric' };
+    // var options2 = { weekday: 'short', year: 'numeric', month: 'long', day: 'numeric' };
+    // var today  = new Date();
+    // var slackTimeDaysDelivery = {"Mon": 8, "Tue": 7, "Wed": 6, "Thu": 5, "Fri": 4, "Sat": 10, "Sun": 9};
+   
+
+    // $("#deliveryDate").text("**All selected drinks will be delivered every Tuesday till the end of the billing period from" + new Date(Date.now() + 1000*60*60*24*slackTimeDaysDelivery[today.toLocaleDateString("en-US", options2).substring(0,3)]).toLocaleDateString("en-US", options) + ", (7pm to 10pm)**");
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <!-- <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbxL5k8P9-vVTUaTTZqmQgxu85oaJTRhJBy5uec0t2_aao6xassFzhSGXCkRxuP3JUlB0Q/exec'
+            const form = document.forms['google-sheet']
+          var a;
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+            
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)}) // new FormData contains a literal object with name/value pairs from the form
+                .then(response => alert("great"))
+                .catch(error => console.error('Error!', error.message))
+            })
+          </script> -->
+
+
+
+
+      
+        
+
+             
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+</body>
+</html>
